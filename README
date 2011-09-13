@@ -19,7 +19,7 @@ The programming language Haskell lends itself well to this problem, given its bu
 
 As seen in Figure 1, all three methods have roughly the same time complexity, though the method based on matrix multiplication (#2), is roughly 2x to 5x faster for larger values of n.
 
-The attached data set has no data point for the Extension method for n = 1 billion.  This is because an "out of memory error" was raised before the result could be obtained [5].  The algorithm does not branch excessively, since the exponentiation operation (***) takes care of one or two bits of the exponent per call.  But the Integer values being handled are on the order of 2 ^x, where x = log_2(2 * phi) > 1.  Operations on numbers with over one billion bits are resource-intensive.  But keep in mind that that's quite far beyond the performance limits of the heavily branching naive algorithm, which becomes intractable at around n = 50.
+The attached data set has no data point for the Extension method for n = 1 billion.  This is because an "out of memory error" was raised before the result could be obtained [5].  The algorithm does not branch excessively, since the exponentiation operation (***) takes care of one or two bits of the exponent per call.  But the Integer values being handled are on the order of 2 ^x, where x = log_2(2 * phi) > 1.  Operations on numbers with close to one billion bits are resource-intensive.  But keep in mind that that's quite far beyond the performance limits of the heavily branching naive algorithm, which becomes intractable at around n = 50.
 
 [1] MIT's Introduction to Algorithms, Lecture 3: Divide and Conquer.  Viewable as a video at http://www.catonmat.net/blog/mit-introduction-to-algorithms-part-two/
 
